@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tugas JavaScript - NIOMIC</title>
+  </head>
+  <body>
+    <button type="button" name="button" onclick="Tombol()">Klick</button>
+    <br>
+    <br>
+    <hr>
+    Atribut <b>getNameItem()</b>
+    <p id="teks1">contoh1</p>
+    <hr>
+    Atribut <b>name()</b>
+    <p id="teks2">contoh2</p>
+    <hr>
+    Atribut <b>length()</b>
+    <p id="teks3">contoh3</p>
+    <hr>
+    <script type="text/javascript">
+      function Tombol(){
+        var a = document.getElementsByTagName('button')[0];
+        var b = a.attributes.getNamedItem("type").value;
+        var c = a.attributes.item(0).name;
+        var d = a.attributes.length;
+
+        document.getElementById('teks1').innerHTML = b;
+        document.getElementById('teks2').innerHTML = c;
+        document.getElementById('teks3').innerHTML = d;
+
+      }
+    </script>
+  </body>
+</html>
